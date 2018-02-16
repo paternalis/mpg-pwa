@@ -7,6 +7,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
+import { HomeModule } from './components/home/home.module';
+import { NewTransactionModule } from './components/new-transaction/new-transaction.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HomeModule,
+    NewTransactionModule,
     environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : []
   ],
   providers: [],
