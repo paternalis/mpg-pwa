@@ -1,3 +1,4 @@
 <p>
-  Accueil
+  Amount : <span [innerHTML]="(getMainReducer() | async).amount"></span>
+  <a (click)="addAmount()">Ajouter du amount</a>
 </p>
